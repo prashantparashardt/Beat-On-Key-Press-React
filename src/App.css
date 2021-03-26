@@ -1,38 +1,57 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  box-sizing: border-box;
+  position: absolute;
+  width: 80%;
+  height: 40%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+  height: 80px;
+  width: 80px;
+  border: 2.5px solid #3e3a3c;
+  margin: 10px;
+  position: relative;
 }
 
-@keyframes App-logo-spin {
+.box1 {
+  height: 80px;
+  width: 80px;
+  border: 2.5px solid #3e3a3c;
+  margin: 10px;
+  position: relative;
+  animation-name: prashant;
+  animation-duration: 0.3s;
+  animation-iteration-count: 1;
+}
+@keyframes prashant {
   from {
-    transform: rotate(0deg);
+    border: 2.5px solid rgba(232, 183, 18, 255);
   }
   to {
-    transform: rotate(360deg);
+    border: 2.5px solid #3e3a3c;
   }
+}
+.letter {
+  color: #000000;
+  font-weight: 500;
+  display: flex;
+  box-sizing: border-box;
+  height: 73%;
+  background-color: #4b5e6e;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  /* padding: 0 13px; */
+  display: flex;
+  justify-content: center;
+  background-color: rgba(232, 183, 18, 255);
 }
