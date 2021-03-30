@@ -3,7 +3,6 @@ import "./App.css";
 import { Data } from "./Sound";
 
 function App() {
-  const [audio, setaudio] = useState(null);
   const [letter, setLetter] = useState(null);
   useEffect(() => {
     window.addEventListener("keydown", (e) => {
@@ -11,17 +10,15 @@ function App() {
         return item.letter === e.key || item.letter.toLowerCase() === e.key;
       });
       if (filteredData.length > 0) {
-        setaudio(new Audio(filteredData[0].src));
+        new Audio(filteredData[0].src).play();
         setLetter(filteredData[0].letter);
       }
     });
   }, []);
 
   useEffect(() => {
-    if (audio !== null) {
-      audio.play();
-    }
-  }, [audio]);
+    setLetter(null);
+  }, [letter]);
   return (
     <div className="App">
       {Data.map((item) => {
